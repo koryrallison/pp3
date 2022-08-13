@@ -1,10 +1,11 @@
 import React from 'react'
 import popsicle from "../assets/te-pops.png" 
+
 function Banner(){
     return (
-    <>
+    <div className="banner">
         
-    <header>
+    <header className="banner--logo">
         <img src={popsicle} alt="Tech Elevator Popsicles Logo" className="banner--logo"/>
         <h1>Tech Elevator Popsicles</h1>
     </header>
@@ -17,7 +18,7 @@ function Banner(){
         </ul>
     </nav>
 
-    </>
+    </div>
     )
 
 }
