@@ -2,16 +2,16 @@ import React from 'react'
 
 function Summer() {
     return (
-        <section id="summer">
-            <h2>Get refreshed this Summer!</h2>
-            <p>
+        <div className="summer">
+            <h2 className="summer--title">Get refreshed this Summer!</h2>
+            <p className="summer--text">
                 Mark this very special occasion of the launch of Tech Elevator Popsicles by buying a gift from our stunning
                 array of item, shipped directly from Cleveland.
             </p>
-            <button class="store-button"><a href="www.amazon.com">
+            <button className="store--button"><a href="https://www.amazon.com">
                 Store
             </a></button>
-        </section>
+        </div>
 
     )
 }

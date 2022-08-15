@@ -1,4 +1,6 @@
 body {
+    height: 100vh;
+    width: 100vw;
     font-family: sans-serif, Arial, Helvetica;
     background-color: #87CEEB;
     display: grid;
@@ -15,17 +17,17 @@ header {
     grid-area: header;
 }
 
-nav {
+.nav {
     grid-area: nav;
 }
 
-main {
+.main {
     display: flex;
     grid-area: main;
     align-items: center;
 }
 
-#race {
+race {
     grid-area: "race";
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -34,16 +36,16 @@ main {
         "img para";
 }
 
-#race>img {
+race>img {
     grid-area: img;
 }
 
-#race>h2 {
+race>h2 {
     grid-area: title;
     text-align: center;
 }
 
-#race>p {
+race>p {
     grid-area: para;
 }
 
@@ -53,7 +55,7 @@ body>#summer {
     flex-direction: column;
 }
 
-body>#summer>h2 {
+summer--title {
     text-align: center;
 }
 
@@ -101,19 +103,16 @@ main img {
     width: 35%;
 }
 
-main>div>ul {
-    list-style: none;
-}
-
-main li:before {
+.main--list-item::before{
     content: '🍡';
     margin-left: -31px;
     padding-right: 8px;
 }
 
-main,
-section,
-footer {
+.main,
+.race,
+.summer,
+.footer {
     background-color: #ffffff;
     border-radius: 5px;
     padding: 20px;

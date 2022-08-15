@@ -3,17 +3,17 @@ import blue from '../assets/blue-pop.png'
 
 function Race() {
     return (
-        <section id="race">
-            <img src={blue} alt="blue popsicle"/>
+        <div className="race">
+            <img src={blue} alt="blue popsicle" className="race--img"/>
 
-            <h2>Popsicle Race</h2>
+            <h2 className="race--title">Popsicle Race</h2>
 
-            <p>
+            <p className="race--text">
             Don’t forget to sign up for the race! Each attendee will receive their own box of popsicles when they
             reach the end.
             </p>
 
-        </section>
+        </div>
     )
 
 }
