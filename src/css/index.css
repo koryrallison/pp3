@@ -1,4 +1,8 @@
-body {
+body{
+    margin: 0;
+    padding: 0;
+}
+.home-container {
     height: 100vh;
     width: 100vw;
     font-family: sans-serif, Arial, Helvetica;
@@ -6,72 +10,42 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "header nav"
+        "header header"
         "main main"
         "race summer"
         "footer footer";
 }
 
-header {
-    display: flex;
+.banner{
+    width: 100%;
     grid-area: header;
-}
-
-.nav {
-    grid-area: nav;
-}
-
-.main {
-    display: flex;
-    grid-area: main;
-    align-items: center;
-}
-
-race {
-    grid-area: "race";
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        "img title"
-        "img para";
+    "headerleft headerright";
 }
-
-race>img {
-    grid-area: img;
-}
-
-race>h2 {
-    grid-area: title;
-    text-align: center;
-}
-
-race>p {
-    grid-area: para;
-}
-
-body>#summer {
-    grid-area: summer;
+.banner--logo-full {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    grid-area: headerleft;
+    padding-left: 20px;
 }
 
-summer--title {
-    text-align: center;
+.banner--nav {
+    grid-area: headerright;
+
 }
 
-footer {
-    grid-area: footer;
-}
-
-nav ul {
+.banner--nav ul {
     display: flex;
     justify-content: space-around;
-    margin: 0;
-    padding: 20px 0 0 0;
+    margin-right: 40px;
+    padding: 0;
     font-weight: bold;
 }
 
-nav ul li {
+.banner--nav ul li {
     list-style: none;
     width: 30%;
     background-color: #00afef;
@@ -81,14 +55,58 @@ nav ul li {
     text-transform: uppercase;
 }
 
-nav ul li a {
+.banner--nav ul li a {
     text-decoration: none;
     color: #000000;
 }
 
-header img {
+.banner--img {
     height: 100px;
     width: auto;
+}
+
+.main {
+    display: flex;
+    grid-area: main;
+    align-items: center;
+}
+
+.race {
+    grid-area: race;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "img title"
+        "img para";
+}
+
+.race>img {
+    grid-area: img;
+}
+
+.race>h2 {
+    grid-area: title;
+    text-align: center;
+}
+
+.race>p {
+    grid-area: para;
+}
+
+.summer {
+    grid-area: summer;
+    display: flex;
+    flex-direction: column;
+}
+
+.summer--title {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center; 
 }
 
 header h1 {
@@ -96,11 +114,15 @@ header h1 {
     padding-top: 10px;
 }
 
-main img {
+.main img {
     object-fit: cover;
     margin-right: 20px;
     height: 350px;
     width: 35%;
+}
+
+.main--list {
+    list-style: none;
 }
 
 .main--list-item::before{
@@ -114,12 +136,12 @@ main img {
 .summer,
 .footer {
     background-color: #ffffff;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 20px;
-    margin: 5px;
+    margin: 10px 20px;
 }
 
-.store-button {
+.store--button {
     /* used for store link in "Get refreshed" section */
     width: 25%;
     padding: 10px;
@@ -132,7 +154,7 @@ main img {
     align-self: center;
 }
 
-.store-button>a {
+.store--button>a {
     text-decoration: none;
     color: #000000;
 }
@@ -144,21 +166,21 @@ main img {
         flex-direction: column;
     }
 
-    main {
+    .main {
         display: flex;
         flex-direction: column;
     }
 
-    nav ul li {
+    .nav ul li {
         line-height: 25px;
     }
 
-    main>img {
+    .main>img {
         margin-right: 0px;
         width: 100%;
     }
 
-    #race {
+    .race {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "img title"
@@ -166,7 +188,7 @@ main img {
             "para para";
     }
 
-    #race>h2 {
+    .race>h2 {
         text-align: justify;
     }
 

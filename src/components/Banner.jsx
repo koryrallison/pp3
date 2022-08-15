@@ -1,6 +1,5 @@
 import React from 'react'
 import popsicle from "../assets/te-pops.png" 
-// import { Grid } from '@mui/material'
 
 
 function Banner(){
@@ -16,7 +15,7 @@ function Banner(){
                     <nav className="banner--nav">
                         <ul>
                             <li className="nav-list-item"><a href="index.html">Home</a></li>
-                            <li className="nav-list-item"><a href="#">Store</a></li>
+                            <li className="nav-list-item"><a href="https://www.amazon.com/s?k=popsicles&crid=3BPYL0K70KFFC&sprefix=popsicles%2Caps%2C131&ref=nb_sb_noss_1">Store</a></li>
                             <li className="nav-list-item"><a href="contact-us.html">Contact Us</a></li>
                         </ul>
                     </nav>
